@@ -1,0 +1,8 @@
+model:
+  name: GrowthModel
+  driver: PythonModelDriver
+  args: example-fakeplant/src/growth.py
+  inputs:
+    - photosynthesis_rate
+  outputs:
+    - growth_rate
