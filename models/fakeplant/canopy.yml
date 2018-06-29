@@ -9,3 +9,5 @@ model:
     - time
   outputs:
     - canopy_structure
+  icon: umbrella
+  description: Canopy Model

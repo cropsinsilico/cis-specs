@@ -6,3 +6,5 @@ model:
     - photosynthesis_rate
   outputs:
     - growth_rate
+  icon: pagelines
+  description: Growth Model (MATLAB)

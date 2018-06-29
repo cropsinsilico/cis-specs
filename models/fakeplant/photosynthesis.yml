@@ -8,3 +8,5 @@ model:
     - co2
   outputs:
     - photosynthesis_rate
+  icon: exchange 
+  description: Photosynthesis Model
