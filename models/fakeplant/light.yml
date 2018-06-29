@@ -1,5 +1,7 @@
 model:
   name: LightModel
+  icon: lightbulb-o
+  description: Light Model
   driver: GCCModelDriver
   args:
     - example-fakeplant/src/light.c
