@@ -2,7 +2,7 @@ model:
   name: LightModel
   language: c
   args:
-    - example-fakeplant/src/light.c
+    - hackathon2018/src/light.c
     - -lm
   inputs:
     - ambient_light
