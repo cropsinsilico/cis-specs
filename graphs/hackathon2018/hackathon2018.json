@@ -1,0 +1,267 @@
+{
+  "caseSensitive": false,
+  "properties": {},
+  "inports": {},
+  "outports": {},
+  "groups": [],
+  "processes": {
+    "1pdw": {
+      "component": "canopymodel",
+      "metadata": {
+        "height": 72,
+        "label": "CanopyModel",
+        "width": 72,
+        "x": 504,
+        "y": 360
+      }
+    },
+    "ofr": {
+      "component": "photosynthesismodel",
+      "metadata": {
+        "height": 72,
+        "label": "PhotosynthesisModel",
+        "width": 72,
+        "x": 864,
+        "y": 432
+      }
+    },
+    "vyz": {
+      "component": "growthmodelpy",
+      "metadata": {
+        "height": 72,
+        "label": "GrowthModelPy",
+        "width": 72,
+        "x": 288,
+        "y": 432
+      }
+    },
+    "frr": {
+      "component": "lightmodel",
+      "metadata": {
+        "height": 72,
+        "label": "LightModel",
+        "width": 72,
+        "x": 648,
+        "y": 288
+      }
+    },
+    "24w2": {
+      "component": "inport",
+      "metadata": {
+        "height": 72,
+        "label": "plant_layout",
+        "name": "hackathon2018/Input/plant_layout.txt",
+        "read_meth": "table",
+        "type": "File",
+        "width": 72,
+        "x": 288,
+        "y": 216
+      }
+    },
+    "yqh": {
+      "component": "inport",
+      "metadata": {
+        "height": 72,
+        "label": "init_canopy_structure",
+        "name": "hackathon2018/Input/canopy_structure.txt",
+        "read_meth": "table",
+        "type": "File",
+        "width": 72,
+        "x": 288,
+        "y": 324
+      }
+    },
+    "13z4": {
+      "component": "inport",
+      "metadata": {
+        "height": 72,
+        "label": "ambient_light",
+        "name": "hackathon2018/Input/ambient_light.txt",
+        "read_meth": "table",
+        "type": "File",
+        "width": 72,
+        "x": 504,
+        "y": 216
+      }
+    },
+    "1suu": {
+      "component": "inport",
+      "metadata": {
+        "height": 72,
+        "label": "temperature",
+        "name": "hackathon2018/Input/temperature.txt",
+        "read_meth": "table",
+        "type": "File",
+        "width": 72,
+        "x": 648,
+        "y": 432
+      }
+    },
+    "6v9": {
+      "component": "inport",
+      "metadata": {
+        "height": 72,
+        "label": "co2",
+        "name": "hackathon2018/Input/co2.txt",
+        "read_meth": "table",
+        "type": "File",
+        "width": 72,
+        "x": 648,
+        "y": 576
+      }
+    },
+    "1zqp": {
+      "component": "inport",
+      "metadata": {
+        "height": 72,
+        "label": "time",
+        "name": "hackathon2018/Input/time.txt",
+        "read_meth": "table",
+        "type": "File",
+        "width": 72,
+        "x": 288,
+        "y": 576
+      }
+    },
+    "3s5": {
+      "component": "inport",
+      "metadata": {
+        "height": 72,
+        "label": "photosynthesis_rate",
+        "name": "hackathon2018/Input/photosynthesis_rate.txt",
+        "read_meth": "table",
+        "type": "File",
+        "width": 72,
+        "x": 144,
+        "y": 432
+      }
+    },
+    "1scw": {
+      "component": "outport",
+      "metadata": {
+        "height": 72,
+        "label": "photosynthesis_rate",
+        "name": "hackathon2018/Output/photosynthesis_rate.txt",
+        "type": "File",
+        "width": 72,
+        "write_meth": "table",
+        "x": 417,
+        "y": 505
+      }
+    }
+  },
+  "connections": [
+    {
+      "src": {
+        "process": "vyz",
+        "port": "growth_rate"
+      },
+      "tgt": {
+        "process": "1pdw",
+        "port": "growth_rate"
+      },
+      "metadata": {}
+    },
+    {
+      "src": {
+        "process": "frr",
+        "port": "light_intensity"
+      },
+      "tgt": {
+        "process": "ofr",
+        "port": "light_intensity"
+      },
+      "metadata": {}
+    },
+    {
+      "src": {
+        "process": "1pdw",
+        "port": "canopy_structure"
+      },
+      "tgt": {
+        "process": "frr",
+        "port": "canopy_structure"
+      },
+      "metadata": {
+        "route": null
+      }
+    },
+    {
+      "src": {
+        "process": "24w2",
+        "port": "value"
+      },
+      "tgt": {
+        "process": "1pdw",
+        "port": "plant_layout"
+      },
+      "metadata": {}
+    },
+    {
+      "src": {
+        "process": "yqh",
+        "port": "value"
+      },
+      "tgt": {
+        "process": "1pdw",
+        "port": "init_canopy_structure"
+      },
+      "metadata": {}
+    },
+    {
+      "src": {
+        "process": "13z4",
+        "port": "value"
+      },
+      "tgt": {
+        "process": "frr",
+        "port": "ambient_light"
+      },
+      "metadata": {}
+    },
+    {
+      "src": {
+        "process": "1suu",
+        "port": "value"
+      },
+      "tgt": {
+        "process": "ofr",
+        "port": "temperature"
+      },
+      "metadata": {}
+    },
+    {
+      "src": {
+        "process": "6v9",
+        "port": "value"
+      },
+      "tgt": {
+        "process": "ofr",
+        "port": "co2"
+      },
+      "metadata": {}
+    },
+    {
+      "src": {
+        "process": "1zqp",
+        "port": "value"
+      },
+      "tgt": {
+        "process": "1pdw",
+        "port": "time"
+      },
+      "metadata": {}
+    },
+    {
+      "src": {
+        "process": "3s5",
+        "port": "value"
+      },
+      "tgt": {
+        "process": "vyz",
+        "port": "photosynthesis_rate"
+      },
+      "metadata": {}
+    }
+  ]
+}
