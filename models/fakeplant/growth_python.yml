@@ -1,7 +1,7 @@
 model:
   name: GrowthModelPy
   language: python
-  args: example-fakeplant/src/growth.py
+  args: hackathon2018/src/growth.py
   inputs:
     - photosynthesis_rate
   outputs:
