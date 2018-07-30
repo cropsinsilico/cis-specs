@@ -1,7 +1,7 @@
 model:
   name: CanopyModel
   language: c++
-  args: hackathon2018/src/canopy.cpp
+  args: hackathon2018/canopy.cpp
   inputs:
     - plant_layout
     - init_canopy_structure
