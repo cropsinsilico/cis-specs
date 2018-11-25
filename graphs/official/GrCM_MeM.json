@@ -1,0 +1,177 @@
+{
+    "content": {
+        "connections": [
+            {
+                "from": {
+                    "node": "1v4e",
+                    "port": "mem_output"
+                },
+                "metadata": {
+                    "field_names": "PhotosynthesisRate",
+                    "field_units": "uMol/s/(m**2)"
+                },
+                "new": false,
+                "to": {
+                    "node": "6vo",
+                    "port": "value"
+                }
+            },
+            {
+                "from": {
+                    "node": "15yh",
+                    "port": "value"
+                },
+                "metadata": {},
+                "to": {
+                    "node": "1v4e",
+                    "port": "mem_input2"
+                }
+            },
+            {
+                "from": {
+                    "node": "1wci",
+                    "port": "value"
+                },
+                "metadata": {},
+                "to": {
+                    "node": "1v4e",
+                    "port": "mem_input3"
+                }
+            },
+            {
+                "from": {
+                    "node": "1th0",
+                    "port": "GrCM_output"
+                },
+                "metadata": {},
+                "to": {
+                    "node": "1v4e",
+                    "port": "MeM_input1"
+                }
+            },
+            {
+                "from": {
+                    "node": "1oo6",
+                    "port": "value"
+                },
+                "metadata": {},
+                "to": {
+                    "node": "1th0",
+                    "port": "grcm_input1"
+                }
+            },
+            {
+                "from": {
+                    "node": "esq",
+                    "port": "value"
+                },
+                "metadata": {},
+                "to": {
+                    "node": "1th0",
+                    "port": "GrCM_static"
+                }
+            }
+        ],
+        "processes": [
+            {
+                "component": "mem",
+                "id": "1v4e",
+                "metadata": {
+                    "height": 72,
+                    "label": "MeM",
+                    "width": 72,
+                    "x": 504,
+                    "y": 324
+                }
+            },
+            {
+                "component": "inport",
+                "id": "15yh",
+                "metadata": {
+                    "height": 72,
+                    "label": "MeM_input2",
+                    "name": "C3PhotosynthesisMetabolicModel/Input/MeM_input2.txt",
+                    "read_meth": "table_array",
+                    "type": "File",
+                    "width": 72,
+                    "x": 324,
+                    "y": 324
+                },
+                "new": false
+            },
+            {
+                "component": "inport",
+                "id": "1wci",
+                "metadata": {
+                    "height": 72,
+                    "label": "MeM_input3",
+                    "name": "C3PhotosynthesisMetabolicModel/Input/MeM_input3.txt",
+                    "read_meth": "table",
+                    "type": "File",
+                    "width": 72,
+                    "x": 324,
+                    "y": 468
+                },
+                "new": false
+            },
+            {
+                "component": "outport",
+                "id": "6vo",
+                "metadata": {
+                    "height": 72,
+                    "label": "MeM_output",
+                    "name": "C3PhotosynthesisMetabolicModel/Output/MeM_output.txt",
+                    "type": "File",
+                    "width": 72,
+                    "write_meth": "table",
+                    "x": 684,
+                    "y": 324
+                },
+                "new": false
+            },
+            {
+                "component": "grcm",
+                "id": "1th0",
+                "metadata": {
+                    "height": 72,
+                    "label": "GrCM",
+                    "width": 72,
+                    "x": 324,
+                    "y": 180
+                }
+            },
+            {
+                "component": "inport",
+                "id": "1oo6",
+                "metadata": {
+                    "height": 72,
+                    "label": "GrCM_input1",
+                    "name": "ProtTranslationModel_CO2/Input/GrCM_input.txt",
+                    "read_meth": "pandas",
+                    "type": "File",
+                    "width": 72,
+                    "x": 144,
+                    "y": 108
+                },
+                "new": false
+            },
+            {
+                "component": "inport",
+                "id": "esq",
+                "metadata": {
+                    "height": 72,
+                    "label": "GrCM_static",
+                    "name": "ProtTranslationModel_CO2/Input/GrCM_static.txt",
+                    "read_meth": "pandas",
+                    "type": "File",
+                    "width": 72,
+                    "x": 144,
+                    "y": 252
+                },
+                "new": false
+            }
+        ]
+    },
+    "name": "GrCM_MeM",
+    "public": true
+}

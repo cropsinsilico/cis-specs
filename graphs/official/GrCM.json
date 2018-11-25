@@ -1,0 +1,99 @@
+{
+    "content": {
+        "connections": [
+            {
+                "from": {
+                    "node": "ijl",
+                    "port": "value"
+                },
+                "metadata": {},
+                "to": {
+                    "node": "cb4",
+                    "port": "grcm_input1"
+                }
+            },
+            {
+                "from": {
+                    "node": "owe",
+                    "port": "value"
+                },
+                "metadata": {},
+                "to": {
+                    "node": "cb4",
+                    "port": "grcm_static"
+                }
+            },
+            {
+                "from": {
+                    "node": "cb4",
+                    "port": "grcm_output"
+                },
+                "metadata": {},
+                "to": {
+                    "node": "mxv",
+                    "port": "value"
+                }
+            }
+        ],
+        "processes": [
+            {
+                "component": "grcm",
+                "id": "cb4",
+                "metadata": {
+                    "height": 72,
+                    "label": "GrCM",
+                    "width": 72,
+                    "x": 396,
+                    "y": 216
+                }
+            },
+            {
+                "component": "inport",
+                "id": "ijl",
+                "metadata": {
+                    "height": 72,
+                    "label": "GrCM_input1",
+                    "name": "ProtTranslationModel_CO2/Input/GrCM_input.txt",
+                    "read_meth": "pandas",
+                    "type": "File",
+                    "width": 72,
+                    "x": 180,
+                    "y": 180
+                },
+                "new": false
+            },
+            {
+                "component": "inport",
+                "id": "owe",
+                "metadata": {
+                    "height": 72,
+                    "label": "GrCM_static",
+                    "name": "ProtTranslationModel_CO2/Input/GrCM_static.txt",
+                    "read_meth": "pandas",
+                    "type": "File",
+                    "width": 72,
+                    "x": 180,
+                    "y": 324
+                },
+                "new": false
+            },
+            {
+                "component": "outport",
+                "id": "mxv",
+                "metadata": {
+                    "height": 72,
+                    "label": "GrCM_output",
+                    "name": "ProtTranslationModel_CO2/Output/GrCM_output.txt",
+                    "type": "File",
+                    "width": 72,
+                    "write_meth": "pandas",
+                    "x": 576,
+                    "y": 216
+                },
+                "new": false
+            }
+        ]
+    },
+    "name": "GrCM",
+    "public": true
+}
