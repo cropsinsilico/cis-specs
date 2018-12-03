@@ -1,5 +1,5 @@
 model:
-    name: GrCM
+  name: GrCM
   language: python
   args: 
     - ProtTranslationModel_C02/src/GrCM_plain.py
