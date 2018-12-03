@@ -1,0 +1,12 @@
+model:
+    name: GrCM
+  language: python
+  args: 
+    - ProtTranslationModel_C02/src/GrCM_plain.py
+  inputs:
+    - GrCM_input1
+    - GrCM_static
+  outputs:
+    - GrCM_output
+  icon: link
+  description: GrCM
