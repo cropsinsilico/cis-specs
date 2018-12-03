@@ -1,11 +1,11 @@
-models:
-  - name: MeM
-    language: matlab
-    args:
-      - C3PhotosynthesisMetabolicModel/src/MeM_alone.m
-    inputs:
-      - MeM_input1
-      - MeM_input2
-      - MeM_input3
-    outputs:
-      - MeM_output
+model:
+  name: MeM
+  language: matlab
+  args:
+    - C3PhotosynthesisMetabolicModel/src/MeM_alone.m
+  inputs:
+    - MeM_input1
+    - MeM_input2
+    - MeM_input3
+  outputs:
+    - MeM_output
