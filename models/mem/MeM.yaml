@@ -9,3 +9,5 @@ model:
     - MeM_input3
   outputs:
     - MeM_output
+  icon: pagelines
+  description: MeM
