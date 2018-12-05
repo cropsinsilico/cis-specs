@@ -2,7 +2,7 @@ model:
   name: GrCM
   language: python
   args: 
-    - ProtTranslationModel_C02/src/GrCM_plain.py
+    - ProtTranslationModel_CO2/src/GrCM_plain.py
   inputs:
     - GrCM_input1
     - GrCM_static
