@@ -1,7 +1,7 @@
 model:
   name: GrowthModel
   language: matlab
-  args: hackathon2018/growth.m
+  args: hackathon2019/growth.m
   inputs:
     - photosynthesis_rate
   outputs:
