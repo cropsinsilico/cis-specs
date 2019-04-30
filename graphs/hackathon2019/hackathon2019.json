@@ -64,7 +64,7 @@
         "height": 72,
         "label": "init_canopy_structure",
         "name": "hackathon2019/Input/canopy_structure.txt",
-        "read_meth": "table",
+        "read_meth": "table_array",
         "type": "File",
         "width": 72,
         "x": 288,
