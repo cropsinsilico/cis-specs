@@ -2,7 +2,7 @@ model:
   name: LightModel
   language: c
   args:
-    - hackathon2018/light.c
+    - hackathon2019/light.c
     - -lm
   inputs:
     - ambient_light

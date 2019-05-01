@@ -1,7 +1,7 @@
 model:
   name: PhotosynthesisModel
   language: python
-  args: hackathon2018/photosynthesis.py
+  args: hackathon2019/photosynthesis.py
   inputs:
     - light_intensity
     - temperature
